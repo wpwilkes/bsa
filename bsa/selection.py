@@ -1,12 +1,13 @@
 """
+Implementation of selection sort.
 """
 
 from typing import Optional
 
-from .utils import swap
+import bsa.utils as utils
 
 
-def selection_sort(array: list, asc=True, inplace=True) -> Optional[list]:
+def selection_sort(array: list, inplace=True) -> Optional[list]:
     """
     """
     if not inplace:
@@ -18,7 +19,7 @@ def selection_sort(array: list, asc=True, inplace=True) -> Optional[list]:
         for j in range(i+1, N):
             if array[midx] > array[j]:
                 midx = j
-        swap(array, i, midx)
+        utils.swap(array, i, midx)
 
     if not inplace:
         return array

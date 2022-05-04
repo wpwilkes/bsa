@@ -1,12 +1,13 @@
 """
+Implementation of insertion sort.
 """
 
 from typing import Optional
 
-from .utils import swap
+import bsa.utils as utils
 
 
-def insertion_sort(array: list, asc=True, inplace=True) -> Optional[list]:
+def insertion_sort(array: list, inplace=True) -> Optional[list]:
     """
     """
     if not inplace:
@@ -16,7 +17,7 @@ def insertion_sort(array: list, asc=True, inplace=True) -> Optional[list]:
     for i in range(1, N):
         j = i
         while j > 0 and array[j-1] > array[j]:
-            swap(array, j, j-1)
+            utils.swap(array, j, j-1)
             j -= 1
 
     if not inplace:

@@ -1,12 +1,16 @@
 """
+Implementation of bubble sort.
 """
 
 from typing import Optional
 
-from .utils import swap
+import bsa.utils as utils
 
 
-def bubble_sort(array: list, asc=True, inplace=True) -> Optional[list]:
+
+def bubble_sort(array: list,
+                asc=True,
+                inplace=True) -> Optional[list]:
     """
     """
     if not inplace:
@@ -22,7 +26,7 @@ def bubble_sort(array: list, asc=True, inplace=True) -> Optional[list]:
             else:
                 unsorted = array[current] < array[next]
             if unsorted:
-                swap(array, next, current)
+                utils.swap(array, next, current)
                 swapped = True
         if not swapped:
             break
