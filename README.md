@@ -1,4 +1,4 @@
-# bst
+# bsa
 
 ![CI](https://github.com/wpwilkes/bsa/actions/workflows/python-package.yml/badge.svg?branch=develop)
 
