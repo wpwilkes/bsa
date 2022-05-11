@@ -1,4 +1,5 @@
 from .bubble import bubble_sort
+from .bucket import bucket_sort
 from .heap import heap_sort
 from .insertion import insertion_sort
 from .merge import merge_sort
